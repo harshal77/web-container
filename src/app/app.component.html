@@ -1,1 +1,6 @@
-<header-app [title] = "'Header Web Component'"></header-app>
+<header-app [title]="title" [clickCount]="clickCount" (headerClick)="setHeaderClick($event)"></header-app>
+<p class="header-count">Header web component click count :- {{clickCount}}</p>
+<div class="header-title">
+  <p class="header-count">Set Header Title </p>
+  <input class="input-box" (input)="setHeaderTitle($event)">
+</div>
